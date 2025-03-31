@@ -1,16 +1,17 @@
 const express = require('express');
-require('dotenv').config();
-const PORT = process.env.PORT;
-const app = express();
+    require('dotenv').config();
+    const PORT = process.env.PORT;
+    const userRoutes = require('./routes/users.js');
+    const app = express();
 
-// setup our views engine 
-app.set('view engine', 'ejs');
-app.set('views', "./views");
+    //setup our view engine
+    app.set(`view engine`,`ejs`);
+    app.set(`views`, "./views");
 
+   app.use(express.static('public'));
+   app.use('userRoutes',);
 
-app.use(express.static('public'));
-
-
-app.listen(PORT, ()=>{
-    console.log(`Connected to port: ${PORT}`);
-});
+  
+    app.listen(PORT, () =>{
+        console.log(`connected to port: ${PORT}`);
+    });
