@@ -1,5 +1,5 @@
 const fs = require('fs').promises;
-const filePath = require('./database.json');
+const filePath = require('../database.json');
 
 
 async function readData(){
