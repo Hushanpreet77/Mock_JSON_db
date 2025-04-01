@@ -32,10 +32,12 @@ try {
 
    // refresh the page 
    res.redirect('/');
-   
+
 
 } catch (error) {
+    res.ststus(500).json(`Internal Server Error: ${error}`);
 }    
 
 }
     
+module.exports = {createUsers};
